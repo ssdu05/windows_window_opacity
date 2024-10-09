@@ -25,7 +25,6 @@ int main(int argc, char* argv[]) {
     
     if (argc == 2) {
         int opacity{ std::atoi(argv[1]) };
-        std::cout << opacity << std::endl;
         if (opacity != 0 && opacity > 0 && opacity < 99) {
 			globals::opacity = static_cast<BYTE>(opacity / 100.0 * 256.0);
         }
