@@ -1,5 +1,4 @@
 #include <Windows.h>
-#include <iostream>
 
 void SetWindowOpacity(HWND hwnd, BYTE opacity) {
     LONG_PTR style = GetWindowLongPtr(hwnd, GWL_EXSTYLE);
@@ -14,7 +13,5 @@ BOOL CALLBACK EnumWindowsProc(HWND hwnd, LPARAM lParam) {
 
 int main() {
     EnumWindows(EnumWindowsProc, 0);
-
-    std::cout << "Transparency applied to all windows!" << std::endl;
     return 0;
 }
